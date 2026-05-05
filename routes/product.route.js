@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAllProducts, getProductById, createProduct, updateProduct, deleteProduct } = require('../controllers/product.controller.js');
+const { getAllProducts, getProductById, createProduct, updateEntireProduct, updateProductPartially, deleteProduct } = require('../controllers/product.controller.js');
 
 // Get all products By Filter (category, minPrice, maxPrice)
 router.get('/', getAllProducts);
@@ -11,8 +11,11 @@ router.get('/:id', getProductById);
 // Create a new product
 router.post('/', createProduct);
 
-// Update a product by ID
-router.put('/:id', updateProduct);
+// Update a product by ID (entirely)
+router.put('/:id', updateEntireProduct);
+
+// Update a product by ID (partially)
+router.patch('/:id', updateProductPartially);
 
 // Delete a product by ID
 router.delete('/:id', deleteProduct);

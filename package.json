@@ -12,6 +12,7 @@
     "dev": "nodemon index.js"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "math": "^0.0.3",
     "mongodb": "^7.2.0",

@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const mongoose = require('mongoose')
 const productRoutes = require('./routes/product.route.js');
@@ -16,7 +17,7 @@ app.get('/', (req, res) => {
 });
      
 
-mongoose.connect("mongodb+srv://<USERNAME>:<PASSWORD>@backenddb.apilxuc.mongodb.net/Node-API?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log('Connected to MongoDB!');
     app.listen(3000, () => {

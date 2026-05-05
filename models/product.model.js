@@ -10,20 +10,20 @@ const ProductSchema = mongoose.Schema(
 
         price: {
             type: Number,
-            required: true,
-            default: 0
+            required: [true, "Please enter product price"],
         },
-
-        description: {
-            type: String,
-            required: [true, "Please enter product description"]
-        },
-
+        
         category: {
             type: String,
             required: [true, "Please enter product category"]
         },
 
+        description: {
+            type: String,
+            required: [false, "Please enter product description"]
+        },
+
+        
     },
     {
         timestamps: true
