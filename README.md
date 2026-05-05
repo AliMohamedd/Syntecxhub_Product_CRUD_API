@@ -25,7 +25,7 @@ Each product includes:
   "name": "string", required
   "price": "number", required
   "category": "string", required
-  "description": "string" 
+  "description": "string" optional
   
 }
 ```
