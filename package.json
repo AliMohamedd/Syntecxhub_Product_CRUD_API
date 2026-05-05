@@ -1,0 +1,23 @@
+{
+  "name": "product-crud-api",
+  "version": "1.0.0",
+  "description": "This is a simple crud api project for a product",
+  "license": "ISC",
+  "author": "Ali Yahya",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "math": "^0.0.3",
+    "mongodb": "^7.2.0",
+    "mongoose": "^9.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
